@@ -12,8 +12,11 @@ while True:
     # print(tmpData)
     tmpData=tmpData.decode('utf-8')
     tmpData=tmpData.split(': ')
-    print(tmpData[3])
-    a=tmpData[1][1:]
-    b=tmpData[3][1:]
-    c=tmpData[5][1:-2]
+    #print(tmpData)
+    a=tmpData[0]
+    a=a.split(',')[0]
+    b=tmpData[1]
+    b=b.split(',')[0]
+    c=tmpData[2]
+    c=c[:-1]
     print(a,b,c)
