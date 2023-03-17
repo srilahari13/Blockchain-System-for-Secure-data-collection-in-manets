@@ -9,4 +9,7 @@ while True:
     obj,addr=s.accept()
     print('Incoming Connection from BroadCast Peer',addr)
     tmpData=obj.recv(1024)
+    # print(tmpData)
+    tmpData=tmpData.decode('utf-8')
+    tmpData=tmpData.split(': ')
     print(tmpData)
