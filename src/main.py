@@ -20,14 +20,14 @@ app=Flask(__name__)
 
 @app.route('/')
 def displaySensoryData():
-    contract,web3=connect_with_data_blockchain()
+    contract,web3=connect_with_data_blockchain(0)
     a,b,c=contract.functions.viewData().call()
     data=[]
     for i in range(len(a)):
         dummy=[]
-        dummy.append(a[i].decode('utf-8'))
-        dummy.append(b[i].decode('utf-8'))
-        dummy.append(c[i].decode('utf-8'))
+        dummy.append(a[i])
+        dummy.append(b[i])
+        dummy.append(c[i])
         data.append(dummy)
     l=len(data)
     return render_template('index.html',dashboard_data=data,len=l)
