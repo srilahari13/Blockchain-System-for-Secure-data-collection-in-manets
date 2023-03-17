@@ -14,9 +14,6 @@ def broadCastData(data):
 
 while True:
     a,b,c=DG.getData()
-    data={}
-    data['a']=a;
-    data['b']=b;
-    data['c']=c;
-    broadCastData(str(data))
+    data='{"a": '+str(a)+', "b" :'+str(b)+', "c" :'+str(c)+'}'
+    broadCastData(data)
     time.sleep(2)
