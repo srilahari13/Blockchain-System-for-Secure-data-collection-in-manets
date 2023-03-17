@@ -1,5 +1,7 @@
 import socket
 import json
+import app
+
 ip='50.50.51.124'
 s=socket.socket()
 s.bind((ip,12345))
@@ -16,3 +18,4 @@ while True:
     b=tmpData['b']
     c=tmpData['c']
     print(a,b,c)
+    app.main(a,b,c)
